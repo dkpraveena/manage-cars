@@ -1,0 +1,166 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "make",
+    "model",
+    "vin",
+    "metadata",
+    "perdayrent",
+    "metrics"
+  ],
+  "properties": {
+    "make": {
+      "$id": "#/properties/make",
+      "type": "string",
+      "title": "The Make Schema",
+      "default": "",
+      "examples": [
+        "Chevy"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "model": {
+      "$id": "#/properties/model",
+      "type": "string",
+      "title": "The Model Schema",
+      "default": "",
+      "examples": [
+        "Corvette"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "vin": {
+      "$id": "#/properties/vin",
+      "type": "string",
+      "title": "The Vin Schema",
+      "default": "",
+      "examples": [
+        "23AGHY64352JITEG98K"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "metadata": {
+      "$id": "#/properties/metadata",
+      "type": "object",
+      "title": "The Metadata Schema",
+      "required": [
+        "Color",
+        "Notes"
+      ],
+      "properties": {
+        "Color": {
+          "$id": "#/properties/metadata/properties/Color",
+          "type": "string",
+          "title": "The Color Schema",
+          "default": "",
+          "examples": [
+            "Blue"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "Notes": {
+          "$id": "#/properties/metadata/properties/Notes",
+          "type": "string",
+          "title": "The Notes Schema",
+          "default": "",
+          "examples": [
+            "After market Rear Tires"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "perdayrent": {
+      "$id": "#/properties/perdayrent",
+      "type": "object",
+      "title": "The Perdayrent Schema",
+      "required": [
+        "Price",
+        "Discount"
+      ],
+      "properties": {
+        "Price": {
+          "$id": "#/properties/perdayrent/properties/Price",
+          "type": "integer",
+          "title": "The Price Schema",
+          "default": 0,
+          "examples": [
+            210
+          ]
+        },
+        "Discount": {
+          "$id": "#/properties/perdayrent/properties/Discount",
+          "type": "integer",
+          "title": "The Discount Schema",
+          "default": 0,
+          "examples": [
+            10
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "$id": "#/properties/metrics",
+      "type": "object",
+      "title": "The Metrics Schema",
+      "required": [
+        "yoymaintenancecost",
+        "depreciation",
+        "rentalcount"
+      ],
+      "properties": {
+        "yoymaintenancecost": {
+          "$id": "#/properties/metrics/properties/yoymaintenancecost",
+          "type": "number",
+          "title": "The Yoymaintenancecost Schema",
+          "default": 0.0,
+          "examples": [
+            3190.76
+          ]
+        },
+        "depreciation": {
+          "$id": "#/properties/metrics/properties/depreciation",
+          "type": "number",
+          "title": "The Depreciation Schema",
+          "default": 0.0,
+          "examples": [
+            1256.43
+          ]
+        },
+        "rentalcount": {
+          "$id": "#/properties/metrics/properties/rentalcount",
+          "type": "object",
+          "title": "The Rentalcount Schema",
+          "required": [
+            "lastweek",
+            "yeartodate"
+          ],
+          "properties": {
+            "lastweek": {
+              "$id": "#/properties/metrics/properties/rentalcount/properties/lastweek",
+              "type": "integer",
+              "title": "The Lastweek Schema",
+              "default": 0,
+              "examples": [
+                2
+              ]
+            },
+            "yeartodate": {
+              "$id": "#/properties/metrics/properties/rentalcount/properties/yeartodate",
+              "type": "integer",
+              "title": "The Yeartodate Schema",
+              "default": 0,
+              "examples": [
+                121
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
