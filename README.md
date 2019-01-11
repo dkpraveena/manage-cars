@@ -4,8 +4,7 @@
 - findCar(model,color)
 - displayLowestPriceCar()
 - displayBestProfitCar()
-- displayCarsCostTable()
-- displayProfitTable()
+- displayAllCars()
 
 ### Notes
 Json library -:  GSON
